@@ -12,7 +12,10 @@
   "devDependencies": {
     "autoprefixer": "^9.8.2",
     "parcel": "^2.0.0-beta.1",
-    "sass": "^1.26.3",
-    "typescript": "^3.8.3"
+    "sass": "^1.26.9",
+    "typescript": "^3.9.6"
+  },
+  "dependencies": {
+    "immer": "^7.0.5"
   }
 }
