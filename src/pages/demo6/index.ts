@@ -2,6 +2,7 @@ import {
 	produce,
 	current,
 	original,
+	isDraft,
 } from 'immer';
 
 const base = {
@@ -15,6 +16,8 @@ const next = produce(base, draft => {
 
 	console.log(orig.x);
 	console.log(copy.x);
+	console.log(isDraft(orig));
+	console.log(isDraft(copy));
 
 	setTimeout(() => {
 		console.log(orig.x);
@@ -23,6 +26,10 @@ const next = produce(base, draft => {
 
 	draft.x++;
 	console.log(draft.x);
+
+	console.log(isDraft(draft));
+	console.log(isDraft(draft.x));
 });
 
 console.log(next.x);
+console.log(isDraft(next));
